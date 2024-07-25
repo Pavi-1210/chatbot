@@ -180,6 +180,7 @@ gunicorn
 langchain_community
 langchain_core
 langchain_google_genai
+langchain_pinecone
 python-dotenv
 pdfplumber
 Flask
@@ -187,6 +188,6 @@ flask_cors
 setuptools
 Werkzeug
 huggingface-hub
-chromadb
+pinecone
 pysqlite3
 SQLAlchemy==2.0.31
