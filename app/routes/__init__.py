@@ -54,16 +54,14 @@ def upload_file():
     file = request.files['file']
     if file.filename == '':
         return jsonify({'error': 'No selected file'}), 400
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        file.save(file_path)
+    # if file and allowed_file(file.filename):
+    #     filename = secure_filename(file.filename)
+    #     file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    #     file.save(file_path)
         
         # Extract text using the function from document_services
-        text = extract_text_from_pdf(file_path)
+    text = extract_text_from_pdf(file_path)
         
-        return jsonify({'text': text}), 200
-    else:
-        return jsonify({'error': 'Invalid file type'}), 400
+    return jsonify({'text': text}), 200
 
 
