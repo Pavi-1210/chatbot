@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 from app.services.retreiver import *
 
 load_dotenv()
-os.environ['HUGGINGFACEHUB_API_TOKEN'] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+# os.environ['HUGGINGFACEHUB_API_TOKEN'] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 os.environ['COHERE_API_KEY'] = os.getenv("COHERE_API_KEY")
 os.environ['GOOGLE_API_KEY']=os.getenv("GOOGLE_API_KEY")
 # model = Cohere(model="command", temperature=1)
